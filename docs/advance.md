@@ -16,15 +16,15 @@
 
 ```python
 # Reprojection
-ras1_lonlat = ras1.rio.reproject("EPSG:4326")
-print(ras1_lonlat)
+data_array_lonlat = data_array.rio.reproject("EPSG:4326")
+print(data_array_lonlat)
 
 # Clip the raster
 from shapely.geometry import box
 
 minx, miny, maxx, maxy = -90.32, 31.33, -89.90, 31.15
 bbox = box(minx, miny, maxx, maxy)
-clipped = ras1_lonlat.rio.clip([bbox], crs="EPSG:4326")
+clipped = data_array_lonlat.rio.clip([bbox], crs="EPSG:4326")
 
 # Resample
 from rasterio.enums import Resampling
