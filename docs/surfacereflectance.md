@@ -11,10 +11,10 @@ Calculates the surface reflectance from PlanetScope imagery files. This function
   - `surface_reflectance.shape` (tuple): A tuple representing the dimensions of the surface reflectance data array, typically indicating the number of rows and columns.
 
 **Code Snippet**:
-
 ```python
 with PlanetScope.open(tif_file) as planet_obj:
     print(planet_obj.reflectance_coefficient)
 
 with PlanetScope.open(tif_file) as planet_obj:
     print(planet_obj.surface_reflectance.shape)
+```
