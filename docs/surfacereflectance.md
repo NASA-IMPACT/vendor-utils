@@ -1,10 +1,14 @@
-# Calculate Surface Reflectance
+### Calculate Surface Reflectance
 
-**Description**:
+**Description**:  
+Calculates the surface reflectance from PlanetScope imagery files. This function opens a PlanetScope `.tif` file to access the reflectance coefficient and the shape of the surface reflectance data array.
 
-- **Input**: 
+- **Input**:  
+  - `tif_file` (str): Path to the PlanetScope `.tif` file containing the image data.
 
-- **Expected Output**: 
+- **Expected Output**:  
+  - `reflectance_coefficient` (float): The reflectance coefficient for the given PlanetScope image.
+  - `surface_reflectance.shape` (tuple): A tuple representing the dimensions of the surface reflectance data array, typically indicating the number of rows and columns.
 
 **Code Snippet**:
 
