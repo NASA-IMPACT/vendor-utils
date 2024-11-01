@@ -12,7 +12,6 @@ PlanetScope TIFF file with multispectral image data (containing at least two ban
  3. EVI: Numpy array with EVI values, providing additional vegetation information with improved sensitivity in areas with dense vegetation.
 
 **Code Snippet**:
-
 ```python
 # Calculate Band Ratio (custom normalized index using specified bands)
 with PlanetScope.open(tif_file) as planet_obj:
@@ -33,4 +32,5 @@ with PlanetScope.open(tif_file) as planet_obj:
     evi = planet_obj.evi
     # Print unique EVI values to verify output and detect any unexpected data artifacts
     print(np.unique(evi))
+```
 
