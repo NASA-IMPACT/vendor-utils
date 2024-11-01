@@ -2,11 +2,12 @@
 
 **Description**: Use search parameters to filter available Planet data based on location, time frame, and specific requirements such as cloud cover percentage. This step helps select data efficiently based on specific analysis needs.
 
-- **Input**: Bounding box coordinates, date range, maximum cloud cover percentage
-- **Expected Output**: List of available imagery items matching the criteria
+**Input**: Bounding box coordinates, date range, maximum cloud cover percentage
+
+**Expected Output**: 
+ 1. List of available imagery items matching the criteria
 
 **Code Snippet**:
-
 ```python
 from planet import DataClient, filters
 
@@ -27,3 +28,4 @@ client = DataClient(auth)
 results = client.search(name="PSScene3Band", filter=combined_filter)
 
 print("Number of images found:", len(results))
+```
